@@ -139,7 +139,7 @@ module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, outpu
    assign failed = 1'b0;
 endmodule
 
-/*
+
 // Provide a wrapper module to debounce input signals if requested.
 m5_if(m5_debounce_inputs, ['m5_tt_top(m5_my_design)'])
 \SV
@@ -163,7 +163,7 @@ module m5_user_module_name (
     input  wire       rst_n     // reset_n - low to reset
 );
    wire reset = ! rst_n;
-
+endmodule
 \TLV tt_lab()
    // Connect Tiny Tapeout I/Os to Virtual FPGA Lab.
    m5+tt_connections()
@@ -177,5 +177,4 @@ module m5_user_module_name (
    m5_if(m5_in_fpga, ['m5+tt_lab()'], ['m5+calc()'])
 
 \SV
-*/
-endmodule
+//endmodule
